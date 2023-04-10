@@ -1,13 +1,56 @@
+{% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Fitness App!</title>
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
 </head>
+<style>
+    
+</style>
 <body>
     <h1>Welcome to booking app!</h1>
     {% block content %}
+<a ></a>
+<div class="header" style="background: rgb(177, 177, 177) url('static/img/header.png') no-repeat fixed center">
+    
+    <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+        <div class="container"><a class="navbar-brand" href="#">Book you next session!</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" href="#team">Our Classes</a>
+                    </li>
+                    
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" href="{% url 'signup' %}">if you dont have an account register here!</a>
+                  </li>
+                  
+                  </a>
+                  
+                </li>
+                  
+                    <!-- <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Dropdown </a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     {% endblock content %}
+     <!--  JQuery  -->
+  <script type="text/javascript" src="{% static 'js/boostrap.min.js' %}"></script>
+
 </body>
 </html>
