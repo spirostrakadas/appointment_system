@@ -1,6 +1,11 @@
 {% extends 'home.html' %}
-<div>
+{% load static %}
+{% block content %}
+<div class="header" style="background: rgb(177, 177, 177) url('static/img/header.png') no-repeat fixed center">
+    <p>our classes</p>
     {% for class in gymclass %}
-    {{class}}
+    <a href="{% url 'class' class.id %}">{{class}}</a>
     {% endfor %}
 </div>
+  
+{% endblock content %}

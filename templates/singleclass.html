@@ -1,0 +1,8 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<a href="{% url 'home' %}">back</a>
+  <h1>Single Class</h1>
+  {{gymclass.name }}
+  <p>{{ gymclass.formatted_schedule }}</p>
+{% endblock %}

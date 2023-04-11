@@ -1,10 +1,11 @@
 {% extends 'home.html' %}
-{% load static %}
+
 {% block content %}
 
 <form action="" method="POST">
+    {% csrf_token %}
     <div class="header" style="background: rgb(177, 177, 177) url('static/img/header.png') no-repeat fixed center">
-    {{form}}
+        {{ form.as_p }}
     <input class="btn btn-primary" type="submit" value="Register">
 </div>
 </form>
