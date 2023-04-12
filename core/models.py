@@ -32,8 +32,11 @@ class Appointment(models.Model):
     member=models.ForeignKey(User,on_delete=models.CASCADE)
     gym_class=models.ForeignKey(Gymclass,on_delete=models.CASCADE)
     instructor=models.ForeignKey(Instructor,on_delete=models.CASCADE)
-    date_time = models.DateTimeField()
+    
 
-    def __str__(self):
-        return f"{{self.member}}  {{self.gym_class}} {{self.instructor}}"
+    def formatted_date(self):
+        return self.gym_class.schedule.strftime('%Y-%m-%d')
+
+    def formatted_time(self):
+        return self.gym_class.formatted_schedule()
     
